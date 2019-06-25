@@ -98,7 +98,7 @@ header a {
 .logo {
     font-size: 5em;
     grid-column: 1;
-    grid-row: span 2;
+    grid-row: 1/2;
     justify-self: center;
     align-self: center;
 }
@@ -106,8 +106,8 @@ header a {
 .nav-container {
     background: var(--main-color);
     display: grid;
-    grid-template-columns: 100px auto;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 100px repeat(2, 1fr);
+    grid-template-rows: 100px 150px;
 }
 
 h1 {
@@ -118,16 +118,18 @@ h1 {
 }
 
 nav {
+    max-width: 250px;
     display: flex;
     flex-wrap: wrap;
-    grid-column: 2;
-    grid-row: 2;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    align-self: start;
 }
 
 nav a {
     padding: 0.5em;
     font-weight: bold;
-    margin: 1em;
+    margin: 0.5em;
     align-self: center;
 }
 
@@ -304,6 +306,18 @@ footer a:hover {
 
 @supports (grid-area: auto) {
 
+    @media screen and (min-width: 513px) {
+
+    nav {
+        max-width: none;
+    }
+     
+    .nav-container {
+        grid-template-columns: 100px auto;
+        grid-template-rows: 100px 100px;
+    }
+}
+
 	@media screen and (min-width: 550px) {
 
         .benefits h2 {
@@ -331,6 +345,11 @@ footer a:hover {
     }
 
     @media screen and (min-width: 750px) {
+
+    .nav-container {
+        grid-template-rows: 150px;
+        padding: 0 1em;
+    }
 
     nav {
         grid-column: 2;
