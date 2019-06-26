@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* Typography */
 
 .text-lg {
@@ -220,7 +224,7 @@ nav a:last-child {
 }
 
 .download-section p {
-    margin-bottom: 1em;
+    margin: 1em;
 }
 
 
