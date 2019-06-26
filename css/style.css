@@ -376,7 +376,8 @@ footer a:hover {
 
     @media screen and (min-width: 900px) {
 
-        nav a {
+        nav a,
+        nav .btn {
             font-size: 1.2em;
         }
 
