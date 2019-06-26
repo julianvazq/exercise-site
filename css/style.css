@@ -111,7 +111,7 @@ header a {
     background: var(--main-color);
     display: grid;
     grid-template-columns: 100px repeat(2, 1fr);
-    grid-template-rows: 100px 150px;
+    grid-template-rows: 80px 120px;
 }
 
 h1 {
@@ -318,7 +318,7 @@ footer a:hover {
      
     .nav-container {
         grid-template-columns: 100px auto;
-        grid-template-rows: 100px 100px;
+        grid-template-rows: 90px 70px;
     }
 }
 
@@ -351,7 +351,7 @@ footer a:hover {
     @media screen and (min-width: 750px) {
 
     .nav-container {
-        grid-template-rows: 150px;
+        grid-template-rows: 130px;
         padding: 0 1em;
     }
 
