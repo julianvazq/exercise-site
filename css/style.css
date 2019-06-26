@@ -137,6 +137,10 @@ nav a {
     align-self: center;
 }
 
+nav .btn {
+    font-size: 1em;
+}
+
 nav a:nth-of-type(-n+3):hover {
     opacity: 0.5;
 }
@@ -310,7 +314,7 @@ footer a:hover {
 
 @supports (grid-area: auto) {
 
-    @media screen and (min-width: 513px) {
+    @media screen and (min-width: 532px) {
 
     nav {
         max-width: none;
@@ -360,6 +364,7 @@ footer a:hover {
         grid-row: 1;
         justify-self: end;
         align-self: center;
+        padding-top: 0.5em;
     }
 
     nav a {
@@ -370,6 +375,10 @@ footer a:hover {
 
 
     @media screen and (min-width: 900px) {
+
+        nav a {
+            font-size: 1.2em;
+        }
 
         .cards {
             grid-gap: 2em;
