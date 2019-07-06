@@ -101,7 +101,8 @@ header a {
 }
 
 .logo {
-    font-size: 5em;
+    /* display: none; */
+    font-size: 3em;
     grid-column: 1;
     grid-row: 1/2;
     justify-self: center;
@@ -111,8 +112,9 @@ header a {
 .nav-container {
     background: black;
     display: grid;
-    grid-template-columns: 100px repeat(2, 1fr);
-    grid-template-rows: 80px 120px;
+    grid-template-columns: 60px 1fr 1fr;
+    grid-template-rows: 80px 100px;
+    padding: 1em;
 }
 
 h1 {
@@ -126,13 +128,13 @@ nav {
     max-width: 250px;
     display: flex;
     flex-wrap: wrap;
-    grid-column: 2/4;
-    grid-row: 2/4;
+    grid-column: 1/4;
+    grid-row: 2/3;
     align-self: start;
 }
 
 nav a {
-    padding: 0.5em;
+    padding: 0.5em 1em 0.5em 0.5em;
     font-weight: bold;
     margin: 0.5em;
     align-self: center;
@@ -315,19 +317,23 @@ footer a:hover {
 
 @supports (grid-area: auto) {
 
-    @media screen and (min-width: 532px) {
-
-    nav {
-        max-width: none;
+    @media screen and (min-width: 337px) {
+        
+        nav {
+            grid-column: 2/4;
+        }
     }
-     
-    .nav-container {
-        grid-template-columns: 100px auto;
-        grid-template-rows: 90px 70px;
-    }
-}
 
-	@media screen and (min-width: 550px) {
+	@media screen and (min-width: 600px) {
+
+        nav {
+            max-width: none;
+        }
+         
+        .nav-container {
+            grid-template-columns: 100px auto;
+            grid-template-rows: 90px 70px;
+        }
 
         .benefits h2 {
             padding-bottom: 1em;
@@ -353,8 +359,12 @@ footer a:hover {
    
     }
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 775px) {
 
+    .logo {
+        font-size: 4em;
+    }
+     
     .nav-container {
         grid-template-rows: 130px;
         padding: 0 1em;
@@ -374,12 +384,15 @@ footer a:hover {
 
 }
 
-
     @media screen and (min-width: 900px) {
 
         nav a,
         nav .btn {
             font-size: 1.2em;
+        }
+
+        .logo {
+            font-size: 5em;
         }
 
         .cards {
