@@ -1,5 +1,13 @@
-# exercise-site
+# Product Landing Page
 
-Description: responsive fictional product landing page.
+Description: responsive fictional product landing page. Decided to go with "Exercise" as the product because I'm into fitness, but it could have been anything.
 
-Technologies: HTML/CSS
+##Tools
+[Semantic HTML]
+[CSS] 
+   -CSS Grid
+   -CSS Flexbox
+  
+##General
+[Responsive Design]
+  
