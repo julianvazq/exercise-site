@@ -1,5 +1,5 @@
 :root {
-  --main-color: #1f0635;
+  --main-color: hsl(273, 92%, 15%);
   --dark-color: #000000;
   --light-color: #f7f4ea;
   --violet: #662e9b;
@@ -15,6 +15,10 @@ html {
   padding: 0;
 }
 
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 /* Typography */
 
 .text-lg {
@@ -25,8 +29,32 @@ html {
   font-size: 1.2em;
 }
 
-span {
+.tm {
   font-size: 0.8em;
+}
+
+.cta-text {
+  line-height: 1.5;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.cta-btn {
+  font-size: 1.3em;
+}
+
+.exercise {
+  color: hsl(273, 92%, 28%);
+  font-size: 2.25rem;
+  display: inline-block;
+  margin: 0 0.125em;
+}
+
+.schedule-consultation {
+  color: #d4d4d4;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 2em;
 }
 
 a {
@@ -34,23 +62,10 @@ a {
   color: var(--dark-color);
 }
 
-h1 {
-  font-family: "Ubuntu", sans-serif;
-}
-
 h3 {
   font-weight: bold;
   border-bottom: solid 1px var(--light-color);
   padding-bottom: 0.5em;
-  letter-spacing: 4px;
-}
-
-header,
-.benefits,
-.download-section,
-.get-started,
-footer {
-  font-family: "Montserrat", sans-serif;
 }
 
 /* General Styling */
@@ -70,7 +85,7 @@ img {
   max-width: 550px;
   text-align: center;
   margin: 0 auto;
-  padding: 1em 0.5em;
+  padding: 4em 1em;
 }
 
 main > * {
@@ -85,10 +100,11 @@ main > * {
   border-radius: 20px;
   color: var(--dark-color);
   background: var(--light-color);
+  border: solid 1.5px var(--light-color);
 }
 
 .btn:hover {
-  background: var(--main-color);
+  background: hsl(273, 92%, 28%);
   color: var(--light-color);
 }
 
@@ -102,7 +118,6 @@ header a {
 }
 
 .logo {
-  /* display: none; */
   font-size: 3em;
   grid-column: 1;
   grid-row: 1/2;
@@ -115,6 +130,7 @@ header a {
   display: grid;
   grid-template-columns: 60px 1fr 1fr;
   grid-template-rows: 80px 100px;
+  border-bottom: 2px solid hsl(273, 79%, 25%);
   padding: 1em;
 }
 
@@ -150,7 +166,7 @@ nav a:nth-of-type(-n + 3):hover {
 }
 
 nav a:last-child {
-  border: solid 2px var(--light-color);
+  border: solid 1.5px var(--light-color);
   padding: 0.5em;
 }
 
@@ -181,6 +197,12 @@ nav a:last-child {
   color: var(--light-color);
 }
 
+.benefits-title {
+  margin-bottom: 1em;
+  line-height: 1.5;
+  font-size: 1.75em;
+}
+
 .card {
   background: var(--dark-color);
   border: solid var(--dark-color) 1px;
@@ -191,6 +213,36 @@ nav a:last-child {
 
 .card .caption {
   padding: 0.5em;
+}
+
+.caption-title {
+  padding: 0.5em;
+}
+
+.caption-text {
+  padding: 0.5em;
+  color: #cfcfcf;
+  line-height: 1.5;
+}
+
+/* Download and Get Started shared styles */
+
+.question {
+  line-height: 1.5;
+  max-width: 505px;
+  margin: auto;
+}
+
+.action {
+  color: #cfcfcf;
+  max-width: 505px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.violet-accent {
+  color: hsl(273, 50%, 65%);
+  font-weight: 500;
 }
 
 /* Download Section */
@@ -211,29 +263,40 @@ nav a:last-child {
   align-items: center;
 }
 
+.download-section .question {
+  margin-bottom: 1em;
+}
+
+.download-section .action {
+  margin-bottom: 1em;
+}
+
 .download-section form {
-  width: 80%;
+  width: 90%;
+  min-width: 325px;
   max-width: 500px;
+  margin-top: 2em;
 }
 
 .download-section form input {
   text-align: center;
   padding: 0.8em;
-  border-radius: 10px;
   width: 80%;
   margin-bottom: 2em;
+  border-radius: 20px;
 }
 
 .download-section p {
   margin: 1em;
 }
 
-input:last-child {
-  background: var(--dark-color);
-  color: var(--light-color);
+.form-btn {
+  background: var(--light-color);
+  color: var(--dark-color);
   font-weight: bold;
   font-size: 1.2em;
-  text-transform: uppercase;
+  padding: 0.5em !important;
+  margin-top: 2em;
 }
 
 /* Get Started Section */
@@ -265,6 +328,10 @@ input:last-child {
   align-self: center;
 }
 
+.get-started-btn {
+  font-size: 1.2em;
+}
+
 /* Footer */
 footer {
   background: url(../images/health-footer.jpg);
@@ -281,7 +348,7 @@ footer a {
 }
 
 footer a:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .contact-info-container {
@@ -407,8 +474,8 @@ footer a:hover {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas:
-        "benefits benefits"
-        "download-section get-started";
+        'benefits benefits'
+        'download-section get-started';
     }
 
     .benefits {

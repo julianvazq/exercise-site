@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Exercise&trade;</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -23,7 +23,7 @@
         <div class="logo">
           <p><i class="far fa-heart"></i></p>
         </div>
-        <h1>Exercise<span>&trade;</span></h1>
+        <h1>Exercise<span class="tm">&trade;</span></h1>
         <nav id="nav">
           <a href="#benefits">Benefits</a>
           <a href="#download-section">Learn More</a>
@@ -33,11 +33,17 @@
       </div>
       <div class="header-content">
         <div class="container">
-          <h2>Find out if Exercise<span>&trade;</span> is right for you!</h2>
-          <p class="text-med">
+          <h2 class="cta-text">
+            Find out if
+            <span class="exercise"
+              >Exercise<span class="tm">&trade;</span></span
+            >
+            is right for you!
+          </h2>
+          <p class="text-med schedule-consultation">
             Schedule a consultation appointment at your nearest gym now
           </p>
-          <a href="#" class="btn">Book Appointment</a>
+          <a href="#" class="btn cta-btn">Book Appointment</a>
         </div>
       </div>
     </header>
@@ -46,7 +52,7 @@
       <!-- Benefits -->
       <section id="benefits" class="benefits">
         <div class="container">
-          <h2>
+          <h2 class="benefits-title">
             There's plenty of reasons to choose Exercise<span>&trade;</span>
           </h2>
           <ul class="cards">
@@ -54,8 +60,8 @@
               <figure>
                 <img src="images/rowing-unsplash.jpg" alt="Running." />
                 <figcaption class="caption">
-                  <h3>Exercise lowers blood pressure</h3>
-                  <p class="caption text-sm">
+                  <h3>1. Exercise lowers blood pressure</h3>
+                  <p class="caption-text text-sm">
                     Exercise works like beta-blocker medication to slow the
                     heart rate and lower blood pressure (at rest and also when
                     exercising). High blood pressure is a major risk factor for
@@ -68,12 +74,12 @@
               <figure>
                 <img src="images/deadlift-unsplash.jpg" alt="Deadlift." />
                 <figcaption class="caption">
-                  <h3>Exercise helps strengthen muscles</h3>
-                  <p class="caption text-sm">
+                  <h3>2. Exercise helps strengthen muscles</h3>
+                  <p class="caption-text text-sm">
                     Exercise improve the muscles’ ability to draw oxygen from
-                    the circulating blood. That reduces the need for the heart—a
-                    muscular organ itself—to work harder to pump more blood to
-                    the muscles, whatever your age.
+                    the circulating blood. That reduces the need for the heart
+                    —a muscular organ itself— to work harder to pump more blood
+                    to the muscles, whatever your age.
                   </p>
                 </figcaption>
               </figure>
@@ -82,12 +88,13 @@
               <figure>
                 <img src="images/running-unsplash.jpg" alt="Rowing." />
                 <figcaption class="caption">
-                  <h3>Exercise lowers stress</h3>
-                  <p class="caption text-sm">
+                  <h3>3. Exercise lowers stress</h3>
+                  <p class="caption-text text-sm">
                     Stress hormones can put an extra burden on the heart.
-                    Exercise—whether aerobic (like running), resistance-oriented
-                    (like weight training) or flexibility-focused (like
-                    yoga)—can help you relax and ease stress.
+                    Exercise —whether aerobic (like running),
+                    resistance-oriented (like weight training) or
+                    flexibility-focused (like yoga)— can help you relax and ease
+                    stress.
                   </p>
                 </figcaption>
               </figure>
@@ -96,11 +103,11 @@
               <figure>
                 <img src="images/swimming-unsplash.jpg" alt="Swimming." />
                 <figcaption class="caption">
-                  <h3>Exercise is key to weight control</h3>
-                  <p class="caption text-sm">
-                    When combined with a smart diet, being physically active is
-                    an essential component for losing weight and even more
-                    important for keeping it off.
+                  <h3>4. Exercise is key to weight control</h3>
+                  <p class="caption-text text-sm">
+                    When combined with a smart diet, exercise is an essential
+                    component for losing weight and even more important for
+                    keeping it off.
                   </p>
                 </figcaption>
               </figure>
@@ -112,13 +119,12 @@
       <!-- Dowload Section -->
       <section id="download-section" class="download-section">
         <div class="container">
-          <h2 class="text-lg">
-            Want to learn more about how Exercise<span>&trade;</span> can
-            improve your life?
+          <h2 class="text-lg question">
+            Want to learn more?
           </h2>
-          <p class="text-lg">
-            Join our mailing list and grab a <bold>FREE PDF</bold> full of tips
-            and tricks!
+          <p class="text-lg action">
+            Suscribe to our mailing list and grab a
+            <span class="violet-accent">free PDF</span> full of tips and tricks!
           </p>
           <form id="form" action="#">
             <input
@@ -135,7 +141,12 @@
               placeholder="Enter your email address"
               required
             />
-            <input id="submit" type="submit" value="Download Now" class="btn" />
+            <input
+              id="submit"
+              type="submit"
+              value="Download Now"
+              class="btn form-btn"
+            />
           </form>
         </div>
       </section>
@@ -143,17 +154,15 @@
       <!-- Ready for Exercise? -->
       <section id="get-started" class="get-started">
         <div class="container">
-          <h2>
-            Ready for Exercise<span>&trade;</span> to change the way you
-            experience life?
+          <h2 class="question">
+            Ready for the journey?
           </h2>
-          <p class="text-lg">
-            Join the thousands of happy and healthy users of Exercise<span
-              >&trade;</span
-            >
+          <p class="text-lg action">
+            Join the thousands of happy and healthy users of
+            <span class="violet-accent">Exercise<span>&trade;</span></span>
             today!
           </p>
-          <a href="#" class="btn">Get Started</a>
+          <a href="#" class="btn get-started-btn">Get Started</a>
         </div>
       </section>
     </main>
