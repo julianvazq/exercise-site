@@ -412,6 +412,7 @@ footer a:hover {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2em;
+      margin: 2em 0;
     }
 
     .card {
@@ -485,7 +486,6 @@ footer a:hover {
 
     .benefits {
       grid-area: benefits;
-      padding: 2em 0;
     }
 
     .download-section {
